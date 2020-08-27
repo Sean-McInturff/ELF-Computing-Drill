@@ -49,7 +49,8 @@ class App extends Component {
         <Header />
         <Content
         features={this.props.features}
-        selected={this.state.selected} />
+        selected={this.state.selected}
+        handleUpdateFeature = {(feature, newValue) => this.updateFeature(feature, newValue)} />
       </div>
     );
   }
