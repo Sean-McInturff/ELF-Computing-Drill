@@ -10,10 +10,7 @@ import slugify from 'slugify';
 import '../App.css';
 
 
-const USCurrencyFormat = new Intl.NumberFormat('en-US', {
-  style: 'currency',
-  currency: 'USD'
-});
+import USCurrencyFormat from '../currency'
 
 class Content extends Component{
       render() {
@@ -43,6 +40,7 @@ class Content extends Component{
           <ListOfOptions 
             features={this.props.features}
             selected={this.props.selected}
+            handleUpdateFeature = {this.props.handleUpdateFeature}
             />
           <Cart 
             features={this.props.features}
